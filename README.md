@@ -3,8 +3,12 @@
 A premium, interactive web-based tool for configuring the **Adafruit MacroPad RP2040**.  
 Easily design your key layouts, set LED colors, and generate the CircuitPython code needed to power your device.
 
-![MacroPad Configurator Preview](https://github.com/ddrayne/macropad-configurator/raw/main/macropad_preview.png)
-*(Note: You can add a screenshot here later)*
+## 🚀 Try it Live
+
+**[Launch the Configurator →](https://ddrayne.github.io/macropad-configurator/)**
+
+---
+
 
 ## Features
 
