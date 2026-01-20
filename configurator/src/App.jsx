@@ -7,10 +7,7 @@ import { generateCode } from './utils/codeGenerator';
 
 function App() {
   const [appName, setAppName] = useState('My MacroPad');
-
-  // Initialize with empty preset
   const [macros, setMacros] = useState(PRESETS[0].macros);
-
   const [selectedKeyIndex, setSelectedKeyIndex] = useState(null);
   const [generatedCode, setGeneratedCode] = useState('');
 
@@ -21,7 +18,6 @@ function App() {
   const loadPreset = (presetName) => {
     const preset = PRESETS.find(p => p.name === presetName);
     if (preset) {
-      // Deep copy to disconnect from const
       setMacros(JSON.parse(JSON.stringify(preset.macros)));
       setAppName(preset.name);
     }
@@ -34,86 +30,105 @@ function App() {
   };
 
   return (
-    <div className="h-full flex flex-col overflow-hidden">
-      {/* Header */}
-      <header className="flex justify-between items-center p-6 border-b border-subtle bg-surface/50 backdrop-blur-md">
-        <div className="flex items-center gap-md">
-          <h1>MacroPad<span style={{ color: 'var(--accent-primary)' }}>.Config</span></h1>
-          <div className="flex gap-sm ml-8">
-            {PRESETS.map(p => (
-              <button
-                key={p.name}
-                className={`btn ${appName === p.name ? 'btn-primary' : ''}`}
-                onClick={() => loadPreset(p.name)}
-              >
-                {p.name}
-              </button>
-            ))}
-          </div>
+    <div className="min-h-screen flex flex-col items-center py-12">
+
+      {/* Top Bar: Title & Presets */}
+      <header className="w-[800px] mb-8 flex justify-between items-end border-b-2 border-black pb-4">
+        <div className="flex flex-col gap-2">
+          <h1>TE-MACRO.CFG</h1>
+          <span className="text-xs font-mono text-muted">RP2040 CONFIGURATION UTILITY v1.0</span>
         </div>
 
-        <div className="input-group m-0">
-          <input
-            className="input-field text-lg font-bold"
-            value={appName}
-            onChange={e => setAppName(e.target.value)}
-            placeholder="App Name"
-          />
+        <div className="flex gap-2">
+          <span className="text-xs font-mono self-center mr-2">PRESETS:</span>
+          {PRESETS.map(p => (
+            <button
+              key={p.name}
+              className={`btn ${appName === p.name ? 'btn-primary' : ''}`}
+              onClick={() => loadPreset(p.name)}
+            >
+              {p.name.toUpperCase()}
+            </button>
+          ))}
         </div>
       </header>
 
-      {/* Main Workspace */}
-      <main className="flex-1 flex overflow-hidden">
+      {/* Main Control Center */}
+      <main className="flex gap-8 items-start relative max-w-[1200px]">
 
-        {/* Left: Device Visualizer */}
-        <section className="flex-1 flex items-center justify-center bg-deep relative">
-          {/* Background decor */}
-          <div style={{
-            position: 'absolute',
-            width: '600px', height: '600px',
-            background: 'radial-gradient(circle, rgba(0,229,255,0.05) 0%, transparent 70%)',
-            top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
-            pointerEvents: 'none'
-          }}></div>
+        {/* Left Column: The Device */}
+        <div className="flex flex-col gap-4">
+          {/* Device Label */}
+          <div className="flex justify-between font-mono text-xs text-muted border-b border-subtle pb-1">
+            <span>HARDWARE VIEW</span>
+            <span>SCALE: 1:1</span>
+          </div>
 
-          <MacroPad
-            macros={macros}
-            selectedKeyIndex={selectedKeyIndex}
-            onKeySelect={setSelectedKeyIndex}
-          />
-        </section>
+          {/* The Device Itself */}
+          <div className="p-8 bg-white border border-subtle shadow-card">
+            <MacroPad
+              macros={macros}
+              selectedKeyIndex={selectedKeyIndex}
+              onKeySelect={setSelectedKeyIndex}
+            />
+          </div>
 
-        {/* Right: Tools & Code */}
-        <section className="w-[450px] flex flex-col border-l border-subtle bg-panel/30 backdrop-blur">
+          <div className="text-xs font-mono text-center text-muted mt-2">
+            CLICK A KEY TO CONFIGURE
+          </div>
+        </div>
 
-          {/* Top: Editor */}
-          <div className="flex-1 p-6 overflow-y-auto border-b border-subtle">
+        {/* Right Column: Configuration & Code */}
+        <div className="w-[400px] flex flex-col gap-6">
+
+          {/* Box 1: App Settings */}
+          <div className="panel">
+            <h3>GLOBAL SETTINGS</h3>
+            <div className="input-group m-0">
+              <label className="input-label">APPLICATION NAME</label>
+              <input
+                className="input-field font-bold"
+                value={appName}
+                onChange={e => setAppName(e.target.value)}
+                placeholder="APP NAME"
+              />
+            </div>
+          </div>
+
+          {/* Box 2: Key Editor */}
+          <div className="panel flex-1 min-h-[300px]">
             <KeyEditor
               macro={selectedKeyIndex !== null ? macros[selectedKeyIndex] : null}
               onUpdate={updateMacro}
             />
           </div>
 
-          {/* Bottom: Code Output */}
-          <div className="h-[300px] flex flex-col p-6 bg-black">
-            <div className="flex justify-between items-center mb-2">
-              <h3 className="text-muted text-sm">GENERATED CODE (Python)</h3>
+          {/* Box 3: Code Output */}
+          <div className="bg-black text-white p-4 font-mono text-xs border border-transparent shadow-card relative">
+            <div className="flex justify-between items-center mb-2 border-b border-gray-800 pb-2">
+              <span className="text-gray-400">~/OUTPUT.PY</span>
               <button
-                className="btn btn-primary py-1 text-xs"
+                className="text-[10px] bg-white text-black px-2 py-1 uppercase font-bold hover:bg-accent-primary hover:text-white"
                 onClick={() => navigator.clipboard.writeText(generatedCode)}
               >
                 Copy
               </button>
             </div>
             <textarea
-              className="flex-1 w-full bg-surface border border-subtle text-xs font-mono p-4 rounded text-dim resize-none focus:outline-none focus:border-accent-primary focus:text-main transition-colors"
+              className="w-full bg-transparent text-gray-300 font-mono resize-none focus:outline-none h-[150px]"
               value={generatedCode}
               readOnly
             />
           </div>
-        </section>
+
+        </div>
 
       </main>
+
+      {/* Footer */}
+      <footer className="mt-12 text-xs font-mono text-muted text-center">
+        DESIGNED FOR ADAFRUIT MACROPAD RP2040 // 2026
+      </footer>
     </div>
   );
 }
