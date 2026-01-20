@@ -1,0 +1,274 @@
+/* Device Container - Simulating the MacroPad PCB/Plate */
+.macropad-device {
+    background: #080808;
+    /* PCB Black */
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    /* Traces grid hint */
+
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.8),
+        /* Deep shadow */
+        inset 0 0 0 1px #333,
+        /* Edge highlight */
+        inset 0 0 20px rgba(0, 0, 0, 0.5);
+
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    border: 1px solid #222;
+}
+
+/* Screws */
+.screw {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #555;
+    border-radius: 50%;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.screw::after {
+    /* Crosshead */
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 2px;
+    background: #222;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.screw::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 2px;
+    background: #222;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.screw.top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.screw.top-right {
+    top: 10px;
+    right: 10px;
+}
+
+.screw.bottom-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+.screw.bottom-right {
+    bottom: 10px;
+    right: 10px;
+}
+
+
+/* Top Section */
+.device-header {
+    display: flex;
+    gap: 20px;
+    height: 80px;
+}
+
+/* OLED Screen */
+.oled-screen {
+    flex: 2;
+    /* Takes up roughly 2/3 */
+    background: #000;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 6px;
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 1);
+    overflow: hidden;
+}
+
+.oled-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.oled-header {
+    font-family: 'Pixelify Sans', monospace;
+    font-size: 8px;
+    color: #FFF;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    margin-bottom: 4px;
+    padding-bottom: 2px;
+    opacity: 0.5;
+}
+
+.oled-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 100%;
+    gap: 1px;
+}
+
+.oled-label {
+    color: #FFF;
+    font-family: 'Pixelify Sans', monospace;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Encoder */
+.encoder-section {
+    flex: 1;
+    /* Takes up 1/3 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+    border-radius: 4px;
+    border: 1px solid #222;
+}
+
+.knob-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #333, #111);
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.knob-top {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: repeating-conic-gradient(#222 0% 2%, #282828 2% 4%);
+    /* Knurling effect */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Key Grid */
+.key-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    /* Slightly tighter than before */
+    width: 100%;
+}
+
+.key-slot {
+    width: 100%;
+    aspect-ratio: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+.key-slot:active .key-cap-clear {
+    transform: translateY(2px) scale(0.98);
+}
+
+/* Selection Ring */
+.key-slot.selected::after {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border: 2px solid var(--accent-primary);
+    border-radius: 12px;
+    opacity: 0.8;
+    pointer-events: none;
+    animation: pulseSelect 1.5s infinite;
+}
+
+@keyframes pulseSelect {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+}
+
+/* LED Lighting (Underneath) */
+.led-diffuse {
+    position: absolute;
+    inset: 15%;
+    border-radius: 50%;
+    filter: blur(8px);
+    opacity: 0.8;
+    transition: all 0.2s ease;
+    z-index: 1;
+}
+
+/* Clear Keycap - The Star of the Show */
+.key-cap-clear {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0.05) 50%,
+            rgba(255, 255, 255, 0.02) 100%);
+    border-radius: 8px;
+    /* Slightly squarer than typical DSA */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    /* Thickness */
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.3),
+        /* Key drop shadow */
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        /* Top edge highlight */
+        inset 0 0 20px rgba(255, 255, 255, 0.05);
+    /* Internal volume */
+    backdrop-filter: blur(4px);
+    /* This blurs the LED underneath */
+    z-index: 2;
+    transition: transform 0.1s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Concave top surface */
+.key-cap-concave {
+    width: 65%;
+    height: 65%;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            rgba(0, 0, 0, 0.05) 0%,
+            transparent 70%);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
