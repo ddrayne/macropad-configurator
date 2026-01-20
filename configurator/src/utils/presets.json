@@ -1,0 +1,1560 @@
+[
+  {
+    "name": "Beam.NG",
+    "macros": [
+      {
+        "color": "#400000",
+        "label": "Reload",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "text",
+            "value": "r"
+          }
+        ]
+      },
+      {
+        "color": "#e6e6fa",
+        "label": "Extend",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "key",
+            "value": "PAGE_UP"
+          }
+        ]
+      },
+      {
+        "color": "#101010",
+        "label": "Retract",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "key",
+            "value": "PAGE_DOWN"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      }
+    ]
+  },
+  {
+    "name": "Vibe Coding Mac",
+    "macros": [
+      {
+        "color": "#004040",
+        "label": "Up",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "UP_ARROW"
+          }
+        ]
+      },
+      {
+        "color": "#004040",
+        "label": "Down",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "DOWN_ARROW"
+          }
+        ]
+      },
+      {
+        "color": "#00ff00",
+        "label": "Enter",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "ENTER"
+          }
+        ]
+      },
+      {
+        "color": "#000080",
+        "label": "Esc",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "ESCAPE"
+          }
+        ]
+      },
+      {
+        "color": "#8000ff",
+        "label": "Dictate",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "F5"
+          }
+        ]
+      },
+      {
+        "color": "#ff0040",
+        "label": "Cancel",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "text",
+            "value": "c"
+          }
+        ]
+      },
+      {
+        "color": "#404000",
+        "label": "Status",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "git status"
+          },
+          {
+            "type": "key",
+            "value": "ENTER"
+          }
+        ]
+      },
+      {
+        "color": "#402000",
+        "label": "Shift+Tab",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_SHIFT"
+          },
+          {
+            "type": "key",
+            "value": "TAB"
+          }
+        ]
+      },
+      {
+        "color": "#605000",
+        "label": "Cost",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "/cost"
+          },
+          {
+            "type": "key",
+            "value": "ENTER"
+          }
+        ]
+      },
+      {
+        "color": "#202020",
+        "label": "Claude",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "claude"
+          },
+          {
+            "type": "key",
+            "value": "ENTER"
+          }
+        ]
+      },
+      {
+        "color": "#000080",
+        "label": "/compact",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "/compact"
+          },
+          {
+            "type": "key",
+            "value": "ENTER"
+          }
+        ]
+      },
+      {
+        "color": "#800000",
+        "label": "Exit",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "text",
+            "value": "d"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vibe Coding Pad",
+    "macros": [
+      {
+        "color": "#004040",
+        "label": "Up",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "UP_ARROW"
+          }
+        ]
+      },
+      {
+        "color": "#004040",
+        "label": "Down",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "DOWN_ARROW"
+          }
+        ]
+      },
+      {
+        "color": "#00ff00",
+        "label": "Enter",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "ENTER"
+          }
+        ]
+      },
+      {
+        "color": "#000080",
+        "label": "Esc",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "ESCAPE"
+          }
+        ]
+      },
+      {
+        "color": "#8000ff",
+        "label": "Dictate",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": "h"
+          }
+        ]
+      },
+      {
+        "color": "#ff0040",
+        "label": "Cancel",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "text",
+            "value": "c"
+          }
+        ]
+      },
+      {
+        "color": "#404000",
+        "label": "Status",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "git status"
+          },
+          {
+            "type": "key",
+            "value": "ENTER"
+          }
+        ]
+      },
+      {
+        "color": "#402000",
+        "label": "Shift+Tab",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_SHIFT"
+          },
+          {
+            "type": "key",
+            "value": "TAB"
+          }
+        ]
+      },
+      {
+        "color": "#605000",
+        "label": "Usage",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "/usage"
+          },
+          {
+            "type": "key",
+            "value": "ENTER"
+          }
+        ]
+      },
+      {
+        "color": "#202020",
+        "label": "Claude",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "claude"
+          },
+          {
+            "type": "key",
+            "value": "ENTER"
+          }
+        ]
+      },
+      {
+        "color": "#000080",
+        "label": "/compact",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "/compact"
+          },
+          {
+            "type": "key",
+            "value": "ENTER"
+          }
+        ]
+      },
+      {
+        "color": "#800000",
+        "label": "Exit",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "text",
+            "value": "d"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mac Photoshop",
+    "macros": [
+      {
+        "color": "#004000",
+        "label": "Undo",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": "z"
+          }
+        ]
+      },
+      {
+        "color": "#004000",
+        "label": "Redo",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": "Z"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "key",
+            "value": "OPTION"
+          },
+          {
+            "type": "text",
+            "value": "S"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      }
+    ]
+  },
+  {
+    "name": "Mac Evernote",
+    "macros": [
+      {
+        "color": "#004000",
+        "label": "New Nt",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": "n"
+          }
+        ]
+      },
+      {
+        "color": "#004000",
+        "label": "New Bk",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_SHIFT"
+          },
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": "n"
+          }
+        ]
+      },
+      {
+        "color": "#004000",
+        "label": "CP Lnk",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "key",
+            "value": "OPTION"
+          },
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": "c"
+          }
+        ]
+      },
+      {
+        "color": "#004000",
+        "label": "Move",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": "m"
+          }
+        ]
+      },
+      {
+        "color": "#004000",
+        "label": "Find",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "OPTION"
+          },
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": "f"
+          }
+        ]
+      },
+      {
+        "color": "#004000",
+        "label": "Emoji",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": " "
+          }
+        ]
+      },
+      {
+        "color": "#004000",
+        "label": "Bullets",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_SHIFT"
+          },
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": "u"
+          }
+        ]
+      },
+      {
+        "color": "#004000",
+        "label": "Nums",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_SHIFT"
+          },
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": "o"
+          }
+        ]
+      },
+      {
+        "color": "#004000",
+        "label": "Check",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_SHIFT"
+          },
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": "t"
+          }
+        ]
+      },
+      {
+        "color": "#004000",
+        "label": "Date",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_SHIFT"
+          },
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": "D"
+          }
+        ]
+      },
+      {
+        "color": "#004000",
+        "label": "Time",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "OPTION"
+          },
+          {
+            "type": "key",
+            "value": "LEFT_SHIFT"
+          },
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": "D"
+          }
+        ]
+      },
+      {
+        "color": "#004000",
+        "label": "Divider",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_SHIFT"
+          },
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": "H"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mac Safari",
+    "macros": [
+      {
+        "color": "#004000",
+        "label": "Fwd >",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "color": "#400000",
+        "label": "Up",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_SHIFT"
+          },
+          {
+            "type": "text",
+            "value": " "
+          }
+        ]
+      },
+      {
+        "color": "#202000",
+        "label": "< Tab",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "key",
+            "value": "LEFT_SHIFT"
+          },
+          {
+            "type": "key",
+            "value": "TAB"
+          }
+        ]
+      },
+      {
+        "color": "#202000",
+        "label": "Tab >",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "key",
+            "value": "TAB"
+          }
+        ]
+      },
+      {
+        "color": "#000040",
+        "label": "Reload",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": "r"
+          }
+        ]
+      },
+      {
+        "color": "#000040",
+        "label": "Home",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": "H"
+          }
+        ]
+      },
+      {
+        "color": "#000040",
+        "label": "Private",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_GUI"
+          },
+          {
+            "type": "text",
+            "value": "w"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      }
+    ]
+  },
+  {
+    "name": "Media",
+    "macros": [
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000020",
+        "label": "Vol+",
+        "sequence": [
+          {
+            "type": "consumer",
+            "value": "VOLUME_INCREMENT"
+          }
+        ]
+      },
+      {
+        "color": "#202020",
+        "label": "Bright+",
+        "sequence": [
+          {
+            "type": "consumer",
+            "value": "BRIGHTNESS_INCREMENT"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000020",
+        "label": "Vol-",
+        "sequence": [
+          {
+            "type": "consumer",
+            "value": "VOLUME_DECREMENT"
+          }
+        ]
+      },
+      {
+        "color": "#202020",
+        "label": "Bright-",
+        "sequence": [
+          {
+            "type": "consumer",
+            "value": "BRIGHTNESS_DECREMENT"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#200000",
+        "label": "Mute",
+        "sequence": [
+          {
+            "type": "consumer",
+            "value": "MUTE"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#202000",
+        "label": "<<",
+        "sequence": [
+          {
+            "type": "consumer",
+            "value": "SCAN_PREVIOUS_TRACK"
+          }
+        ]
+      },
+      {
+        "color": "#002000",
+        "label": "Play/Pause",
+        "sequence": [
+          {
+            "type": "consumer",
+            "value": "PLAY_PAUSE"
+          }
+        ]
+      },
+      {
+        "color": "#202000",
+        "label": ">>",
+        "sequence": [
+          {
+            "type": "consumer",
+            "value": "SCAN_NEXT_TRACK"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mouse",
+    "macros": [
+      {
+        "color": "#200000",
+        "label": "L",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "MOUSE_MACRO(UNSUPPORTED)"
+          }
+        ]
+      },
+      {
+        "color": "#202000",
+        "label": "M",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "MOUSE_MACRO(UNSUPPORTED)"
+          }
+        ]
+      },
+      {
+        "color": "#002000",
+        "label": "R",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "MOUSE_MACRO(UNSUPPORTED)"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#202020",
+        "label": "Up",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "MOUSE_MACRO(UNSUPPORTED)"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#202020",
+        "label": "Left",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "MOUSE_MACRO(UNSUPPORTED)"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#202020",
+        "label": "Right",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "MOUSE_MACRO(UNSUPPORTED)"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#202020",
+        "label": "Down",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "MOUSE_MACRO(UNSUPPORTED)"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      }
+    ]
+  },
+  {
+    "name": "Numpad",
+    "macros": [
+      {
+        "color": "#202000",
+        "label": "7",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "7"
+          }
+        ]
+      },
+      {
+        "color": "#202000",
+        "label": "8",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "8"
+          }
+        ]
+      },
+      {
+        "color": "#202000",
+        "label": "9",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "9"
+          }
+        ]
+      },
+      {
+        "color": "#202000",
+        "label": "4",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "color": "#202000",
+        "label": "5",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "5"
+          }
+        ]
+      },
+      {
+        "color": "#202000",
+        "label": "6",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "6"
+          }
+        ]
+      },
+      {
+        "color": "#202000",
+        "label": "1",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "color": "#202000",
+        "label": "2",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "color": "#202000",
+        "label": "3",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "3"
+          }
+        ]
+      },
+      {
+        "color": "#101010",
+        "label": "*",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "*"
+          }
+        ]
+      },
+      {
+        "color": "#800000",
+        "label": "0",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "color": "#101010",
+        "label": "#",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "#"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Tones",
+    "macros": [
+      {
+        "color": "#200000",
+        "label": "C3",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "MOUSE_MACRO(UNSUPPORTED)"
+          }
+        ]
+      },
+      {
+        "color": "#202000",
+        "label": "C4",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "MOUSE_MACRO(UNSUPPORTED)"
+          }
+        ]
+      },
+      {
+        "color": "#002000",
+        "label": "C5",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "MOUSE_MACRO(UNSUPPORTED)"
+          }
+        ]
+      },
+      {
+        "color": "#000020",
+        "label": "Rising",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "MOUSE_MACRO(UNSUPPORTED)"
+          },
+          {
+            "type": "delay",
+            "value": 0.2
+          },
+          {
+            "type": "text",
+            "value": "MOUSE_MACRO(UNSUPPORTED)"
+          },
+          {
+            "type": "delay",
+            "value": 0.2
+          },
+          {
+            "type": "text",
+            "value": "MOUSE_MACRO(UNSUPPORTED)"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000020",
+        "label": "Falling",
+        "sequence": [
+          {
+            "type": "text",
+            "value": "MOUSE_MACRO(UNSUPPORTED)"
+          },
+          {
+            "type": "delay",
+            "value": 0.2
+          },
+          {
+            "type": "text",
+            "value": "MOUSE_MACRO(UNSUPPORTED)"
+          },
+          {
+            "type": "delay",
+            "value": 0.2
+          },
+          {
+            "type": "text",
+            "value": "MOUSE_MACRO(UNSUPPORTED)"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      }
+    ]
+  },
+  {
+    "name": "Win Photoshop",
+    "macros": [
+      {
+        "color": "#004000",
+        "label": "Undo",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "text",
+            "value": "z"
+          }
+        ]
+      },
+      {
+        "color": "#004000",
+        "label": "Redo",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "text",
+            "value": "Z"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "key",
+            "value": "LEFT_ALT"
+          },
+          {
+            "type": "text",
+            "value": "S"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      }
+    ]
+  },
+  {
+    "name": "Windows Edge",
+    "macros": [
+      {
+        "color": "#004000",
+        "label": "< Back",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_ALT"
+          },
+          {
+            "type": "key",
+            "value": "LEFT_ARROW"
+          }
+        ]
+      },
+      {
+        "color": "#004000",
+        "label": "Fwd >",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_ALT"
+          },
+          {
+            "type": "key",
+            "value": "RIGHT_ARROW"
+          }
+        ]
+      },
+      {
+        "color": "#400000",
+        "label": "Up",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_SHIFT"
+          },
+          {
+            "type": "text",
+            "value": " "
+          }
+        ]
+      },
+      {
+        "color": "#202000",
+        "label": "- Size",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "key",
+            "value": "KEYPAD_MINUS"
+          }
+        ]
+      },
+      {
+        "color": "#202000",
+        "label": "Size +",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "key",
+            "value": "KEYPAD_PLUS"
+          }
+        ]
+      },
+      {
+        "color": "#000040",
+        "label": "Reload",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "text",
+            "value": "r"
+          }
+        ]
+      },
+      {
+        "color": "#000040",
+        "label": "Home",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_ALT"
+          },
+          {
+            "type": "key",
+            "value": "HOME"
+          }
+        ]
+      },
+      {
+        "color": "#000040",
+        "label": "Private",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "text",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": [
+          {
+            "type": "key",
+            "value": "LEFT_CONTROL"
+          },
+          {
+            "type": "text",
+            "value": "w"
+          }
+        ]
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      },
+      {
+        "color": "#000000",
+        "label": "",
+        "sequence": []
+      }
+    ]
+  }
+]
