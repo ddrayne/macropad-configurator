@@ -1,62 +1,62 @@
-# Adafruit MacroPad Hotkeys (cross-platform)
+# Adafruit MacroPad Configurator
 
-This device runs the CircuitPython macro launcher in `code.py`. It exposes 12 keys plus the encoder button (optional 13th macro) and cycles between macro sets stored in `macros/*.py`.
+A premium, interactive web-based tool for configuring the **Adafruit MacroPad RP2040**.  
+Easily design your key layouts, set LED colors, and generate the CircuitPython code needed to power your device.
 
-## How it works
-- Each macro file defines an `app` dict with a `name` and `macros` list; files load alphabetically.
-- Each macro entry is `(color, label, sequence)`. `color` is a 24-bit hex LED value, `label` shows on the OLED, `sequence` is processed on press/release.
-- Rotate the encoder to switch apps; pressing the encoder runs entry 13 if present.
+![MacroPad Configurator Preview](https://github.com/ddrayne/macropad-configurator/raw/main/macropad_preview.png)
+*(Note: You can add a screenshot here later)*
 
-### Sequence anatomy
-- `int >= 0`: press that keycode (e.g., `Keycode.ENTER`).
-- `int < 0`: release that keycode (e.g., `-Keycode.ENTER`).
-- `float`: pause for that many seconds.
-- `str`: type the text literally via the current keyboard layout.
-- `list`: consumer control codes (media/brightness) like `[[ConsumerControlCode.VOLUME_INCREMENT]]`; iterate and press/release as written.
-- `dict`: mouse/tone/audio — any mix of `buttons`, `x`, `y`, `wheel`, `tone`, `play`.
+## Features
 
-## Actions available on all operating systems
-All actions are pure USB HID or on-device audio, so they are OS-agnostic. Your key choices may still target OS-specific shortcuts.
+*   **Live Visual Preview**:
+    *   **OLED Screen**: Updates instantly as you type labels.
+    *   **RGB LEDs**: Visualizes color settings with realistic "clear plastic" keycap diffusion and transparent "off" states.
+    *   **Realistic Layout**: Matches the physical hardware (Screen & Encoder on top, 12 keys below).
+*   **Drag-and-Drop / Click Flow**:
+    *   Select any key to edit its properties.
+    *   Assign specific hex colors to each key.
+    *   Define macro sequences (Key presses, Media controls, Text, Delays).
+*   **Smart Presets**:
+    *   Load built-in examples (Media, Numpad) to get started instantly.
+*   **Code Generation**:
+    *   Automatically generates the valid `app` dictionary Python code required by the MacroPad.
 
-- **Keyboard HID**: positive ints press keys (e.g., `Keycode.ENTER`), negative ints release (`-Keycode.ENTER`). Strings type literal text via `macropad.keyboard_layout.write()`.
-- **Delays**: float values pause the macro in seconds (e.g., `0.25`).
-- **Consumer control (media/brightness)**: wrap codes in a nested list, e.g., `[[ConsumerControlCode.VOLUME_INCREMENT]]`; use negative to release.
-- **Mouse HID**: dicts with any mix of `buttons`, `x`, `y`, `wheel`; positive `buttons` presses, negative releases.
-- **Audio feedback**: `{'tone': frequency}` to start a tone, `{'tone': 0}` to stop, or `{'play': 'filename.wav'}` to play a file.
-- **LED/display feedback**: when pressed, a key LED flashes white; on release it returns to the macro color, and labels are updated per app.
+## Getting Started
 
-## What happens on press vs release
-- On press, the whole sequence runs in order (keys, delays, media, mouse, tones, audio files).
-- On release, the firmware cleans up: it releases any keys pressed as positive integers, releases mouse buttons set via `buttons`, stops tones, and calls `consumer_control.release()`; media codes themselves should still be written with press/release semantics if you need to hold them.
-- Mouse motion/wheel, delays, and audio file playback do not “undo” on release; audio files play until they finish.
-- LED for the key returns to the configured color on release.
+ This project uses **Vite + React**.
 
-## Creating or editing macro files
-1) Copy an existing file in `macros/` (e.g., `media.py`) and rename it to describe the app.
-2) Update the `app` dict: set `name`, then edit the `macros` list (up to 13 entries; index 12 is the encoder button).
-3) Import the HID classes you need at the top (e.g., `Keycode`, `ConsumerControlCode`, `Mouse`).
-4) Save and reboot or press reset; `code.py` auto-loads all `.py` files in `macros/`.
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/ddrayne/macropad-configurator.git
+    cd macropad-configurator
+    ```
 
-## Sequence reference (mix and match)
-- Key press and release: `[Keycode.CONTROL, -Keycode.CONTROL]`
-- Type text: `['hello world']`
-- Pause: `[0.1]`
-- Media key: `[[ConsumerControlCode.PLAY_PAUSE]]`
-- Mouse move and click: `[{'x': 20, 'y': -10}, {'buttons': Mouse.LEFT_BUTTON}, {'buttons': -Mouse.LEFT_BUTTON}]`
-- Tone feedback: `[{'tone': 440}, 0.2, {'tone': 0}]`
+2.  **Navigate to the app directory**:
+    ```bash
+    cd configurator
+    ```
 
-## Example macro entry
-```
-(0x004000, 'Demo', [
-    Keycode.CONTROL, 'c', 0.1, 'Hello',
-    [ConsumerControlCode.VOLUME_INCREMENT],
-    {'x': 15, 'y': -15},
-    {'tone': 440}, 0.2, {'tone': 0}
-])
-```
-This sets a green key labeled "Demo" that copies, types text, nudges volume, moves the mouse, and beeps.
+3.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-## Tips
-- Keep labels short so they fit the display; empty strings hide unused keys.
-- Use delays between multi-step combos that need host time to react.
-- Group macros by app to keep the encoder dial navigation clear.
+4.  **Run the development server**:
+    ```bash
+    npm run dev
+    ```
+
+5.  Open your browser to `http://localhost:5173` (or the port shown in your terminal).
+
+## Documentation
+
+For details on the original python firmware, macro formats, and hardware specifics, check the **[docs](docs/)** folder:
+
+*   [Macro Information & Firmware Guide](docs/macro-information.md) (Original README)
+*   [Agent Guide](docs/AGENT_GUIDE.md)
+
+## Tech Stack
+
+*   **Framework**: React (Vite)
+*   **Styling**: Vanilla CSS (CSS Variables, Grid, Flexbox)
+*   **Visuals**: Custom CSS-only hardware simulation (Frosted glass effects, LED glow, PCB textures).
