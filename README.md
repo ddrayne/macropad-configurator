@@ -5,7 +5,7 @@ Easily design your key layouts, set LED colors, and generate the CircuitPython c
 
 ## 🚀 Try it Live
 
-**[Launch the Configurator →](https://ddrayne.github.io/macropad-configurator/)**
+**[Launch the Configurator →](https://macropad.apps.drayne.xyz/)**
 
 ![MacroPad Configurator](images/preview.png)
 
